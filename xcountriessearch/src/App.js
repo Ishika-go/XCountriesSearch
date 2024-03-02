@@ -11,9 +11,9 @@ export default function App() {
     data();
   }, []);
   function data() {
-    const controller = new AbortController();
-const signal = controller.signal;
-setTimeout(() => controller.abort(), 8000);
+//     const controller = new AbortController();
+// const signal = controller.signal;
+// setTimeout(() => controller.abort(), 8000);
     fetch("https://restcountries.com/v3.1/all",{signal: signal})
       .then((res) => res.json())
       .then((data1) => {
